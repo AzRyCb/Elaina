@@ -51,27 +51,27 @@ import moment from 'moment-timezone'
 /*============== SOCIAL ==============*/
 
 // kalo ga punya biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/Xiao_yan_21' //Link Instagrammu
-global.sgh = 'https://github.com/ImYanXiao' //Link Githubmu
-global.sgc = 'https://chat.whatsapp.com/DyBMXDw1IshFM9z0ZHZNlR'
+global.sig = 'https://instagram.com/' //Link Instagrammu
+global.sgh = 'https://github.com/AzRyCb' //Link Githubmu
+global.sgc = 'https://chat.whatsapp.com/FV3MU8D22P19dKEyA7EAfD'
 global.sdc = '-' //Isi Pake Link Discordmu Kalo Gada Biarin aja
-global.snh = 'https://nhentai.net/' //Hmmm, Ini boleh kalian isi terserah :v
+global.snh = '' //Hmmm, Ini boleh kalian isi terserah :v
 
 /*============== PAYMENT ==============*/
 global.pdana = '-' //Nomor Danamu
 global.ppulsa = '-' //Nomor SimCard Yang Kamu Pake
-global.psaweria = 'https://saweria.com/XiaoYan021' //Link Saweriamu Kalo Nggada Ketik - aja
+global.psaweria = 'https://saweria.com/' //Link Saweriamu Kalo Nggada Ketik - aja
 
 /*============== NOMOR ==============*/
 global.nomorbot = '-' //Nomor Bot
 global.nomorown = '-' //Nomor Owner
-global.namebot = 'Elaina BOT' //Nama Bot
-global.nameown = '-' // Nama Owner
+global.namebot = 'NeuBot' //Nama Bot
+global.nameown = 'Owner NeuBot' // Nama Owner
 
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['-', 'Developer Owner', true] //Ganti jd nomormu sama Namamu
+  ['6283879175089', 'Developer Owner', true] //Ganti jd nomormu sama Namamu
   // [number, dia creator/owner?, dia developer?] ex= [62123456789, "siapa kek", false]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -94,10 +94,10 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikeymu, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 Elaina 𝙱𝙾𝚃 汉  」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Elaina - Chan˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ Elaina 𝙱𝙾𝚃'
-global.namedoc = 'Elaina`s Bot' //Main Name Menu Document
+global.wm = '                「  NeuBot 」' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘ Neu Bot ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm3 = '⫹⫺ NeuBot'
+global.namedoc = 'NeuBot' //Main Name Menu Document
 global.botdate = `⫹⫺ Day's: ${week} ${date}\nWeton: ${weton}`
 global.bottime = `⫹⫺TIME: \nWIB: ${wktuwib}\nWITA: ${wktuwita}\nWIT: ${wktuwit}`
 global.titlebot = '🎋 ┊ Simple WhatsApp Bot'
