@@ -45,6 +45,7 @@ const {
     DisconnectReason,
     fetchLatestBaileysVersion, 
     makeInMemoryStore, 
+    jidNormalizedUser,
     makeCacheableSignalKeyStore, 
     PHONENUMBER_MCC
     } = await import('@adiwajshing/baileys') 
@@ -65,6 +66,9 @@ serialize()
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 // global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
+
+global.adReply = {};
+
 global.timestamp = {
   start: new Date
 }
@@ -118,7 +122,7 @@ const { version, isLatest} = await fetchLatestBaileysVersion()
 const { state, saveCreds } = await useMultiFileAuthState('./sessions')
 const connectionOptions = {
         version,
-        logger: pino({ level: 'silent' }), 
+        logger: pino({ level: 'fatal' }), 
         printQRInTerminal: !usePairingCode, 
 	// Optional If Linked Device Could'nt Connected
 	// browser: ['Mac OS', 'chrome', '125.0.6422.53']
@@ -131,8 +135,9 @@ const connectionOptions = {
          })), 
      },
      getMessage: async key => {
-    		const messageData = await store.loadMessage(key.remoteJid, key.id);
-    		return messageData?.message || undefined;
+	     	const jid = jidNormalizedUser(key.remoteJid);
+    		const messageData = await store.loadMessage(jid, key.id);
+    		return messageData?.message || '';
 	},
   generateHighQualityLinkPreview: true, 
 	      patchMessageBeforeSending: (message) => {
